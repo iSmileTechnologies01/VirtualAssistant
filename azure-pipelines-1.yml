@@ -1,0 +1,29 @@
+# Starter pipeline
+- task: TerraformTaskV1@0
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    commandOptions: '-out=tfplan, tfplan -auto-approve'
+    backendServiceArm: 'umair-test1'
+    backendAzureRmResourceGroupName: 'ism-va-iaac-eastus'
+    backendAzureRmStorageAccountName: 'terraformumair'
+    backendAzureRmContainerName: 'terraformumair1'
+    backendAzureRmKey: 'W506ceq5UB59mn2aA3tYgtSs6jGVLIsko0lfgwS4SoDv9nyahxYdi53sH+bw3hhKZLXg9SvARjDWZTuT2MbG4w=='
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'

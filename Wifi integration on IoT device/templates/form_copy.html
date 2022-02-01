@@ -1,0 +1,47 @@
+
+
+<html>
+
+    <head>
+    <link rel="stylesheet" href="static/css/app.css">
+    <style type="text/css">
+
+      html,body { height: 100%; margin: 0px; padding: 0px; }
+      #full { background-color: lightcoral; height: 100%;text-align: center; }
+
+    </style>
+    </head>
+
+    <body>
+    
+            <div class="navbar">
+                <a href="http://finalmodel.azurewebsites.net/" class="navbar-brand">Home</a>
+                <a href="http://finalmodel.azurewebsites.net/" class="navbar-item">About</a>
+                <a href="http://finalmodel.azurewebsites.net/" class="navbar-item">Contact</a>
+            </div>
+
+            <div id ="full">
+            
+                <form action="/data" method = "POST">
+                <br>
+                    <p>Wifi<select name= choice method="GET" action="/">
+                        {% for choice in choices %}
+                        <option value= "{{choice}}" SELECTED>{{choice}}</option>"
+                        {% endfor %}
+                    </select></p>
+                    <p>Password <input type = "text" name = "Password" /></p>
+                    
+                    <p><input type = "submit" value = "Submit" /></p>
+                    
+                </form>
+             
+            </div>
+            
+            <Footer>
+            <br>
+                <p>iSmileTechnologies © 2020</p>
+            </Footer>
+    
+    </body>
+
+</html>

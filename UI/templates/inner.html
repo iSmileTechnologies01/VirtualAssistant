@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ismile Technologies</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/static/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <!--Rate us-->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+       <!--move this to stylesheet-->
+       <style>
+        .chat_p { 
+          padding:10px;
+          border: 4px solid rgb(30, 5, 53);
+          text-align: center;
+          border-radius:7px;
+          }
+  
+          </style>
+       <!--end of stylesheet-->
+       
+  <style>
+        div.stars {
+          width: 270px;
+          display: inline-block;
+        }
+
+        input.star { display: none; }
+
+        label.star {
+          float: right;
+          padding: 10px;
+          font-size: 36px;
+          color: #444;
+          transition: all .2s;
+        }
+
+        input.star:checked ~ label.star:before {
+          content: '\f005';
+          color: rgba(21, 5, 23, 0.85);
+          transition: all .25s;
+        }
+
+        input.star-5:checked ~ label.star:before {
+          color:rgba(21, 5, 23, 0.85)
+          text-shadow: 0 0 20px #952;
+        }
+
+        input.star-1:checked ~ label.star:before { color: #F62; }
+
+        label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+        label.star:before {
+          content: '\f006';
+          font-family: FontAwesome;
+        }
+  </style>     
+    
+    
+
+   
+</head>
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+   <section id="hero">
+    <div class="hero-container">
+      <h1>Ismile COVID ANALYZER</h1>
+      <a href="#services" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="{{url_for('inner')}}">Ismile COVID ANALYZER</a></h1>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+
+          <li><a href="#services">Chat Bot</a></li>
+          <li><a href="#survey">Survey</a></li>
+          <li><a href="#X-RAY">X-RAY DIAGNOSIS</a></li>
+          <li><a href="#MOLECULAR">Molecular Analysis</a></li>
+          <li><a href="#contact">Contact</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+     
+  </header><!-- End Header -->
+
+  <main id="main">
+    
+    <!-- ======= Chat Bot Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Chat Bot</h2>
+        </div>
+
+        <div class="row">
+          
+          <div class="col-md-6">
+            <div class="icon-box">
+              <iframe src='https://webchat.botframework.com/embed/ismileqna-bot?s=XPaM_oGsU64.FSjMgwuzG9MeKSXmQCUBRkeOtal1uRidfckuT1PFp2s' style=' width: 100%; min-height: 500px; border: 5px solid #280a2c;border-radius: 8px;'></iframe>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+              <div class="chat_p">
+                <h2> <b> Type <i>Hi</i> to start conversation with the chatbot</b> </h2>
+                  <h5>The following are the services provided by the chatbot:</h5>
+                  <ol>
+                    <li>A survey to validate your health and indicate Covid 19 signs. </li><br><br>
+                    <li>Collects and analyses your Temprature, Pulse and Oxygen level to find Covid 19 probability.</li><br><br>
+                    <li>AN Xray model analysis service that detects pnemonia, a major indicator of Covid 19.</li><br><br>
+                    <li style="text-align:left;">&nbsp;&nbsp;Service to locate hospitals near you.</li><br>
+                  </ol>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+      <section id="survey" class="">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Survey</h2>
+            <br>
+        </div>
+          <div class="row">
+        <div class="col-md-6">
+                        <p>Please take a short survey</p>
+            <a class="cta-btn" href="#">Know More</a>
+            
+            
+          </div>
+          <div class="col-md-6">
+              <img src="static/img/portfolio/portfolio-4.jpg">
+              </div></div>
+      </div>
+    </section>
+
+ 
+    <section id="X-RAY" class="">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>X-RAY DIAGNOSIS</h2>
+            <br>
+        </div>
+          <div class="row">
+        <div class="col-md-6">
+                        <p>Chest X-rays are used to detect infections in the lungs, it’s a reliable way to diagnose respiratory infections caused by COVID-19</p>
+            <a onclick="stat()" class="cta-btn" href="{{url_for('barcode')}}">click here</a>
+            
+            
+          </div>
+          <div class="col-md-6">
+              <img src="static/img/portfolio/portfolio-2.jpg">
+              </div></div>
+      </div>
+    </section><!-- End Testimonials Section -->
+
+  
+    <section id="MOLECULAR" class="">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>MOLECULAR ANALYSIS</h2>
+          <p></p>
+            <br>
+        </div>
+          <div class="row">
+        
+          <div class="col-md-6">
+              <img src="static/img/portfolio/portfolio-3.jpg">
+              </div>
+          <div class="col-md-6">
+                        <p>The cellular entry of coronaviruses depends on the binding of proteins with viral spicules (S) to the cellular receptors and the priming of the S protein by the host cell proteases.</p>
+            <!--<a class="cta-btn" href="#">Know More</a>-->
+                        <h4>Comming Soon...</h4>
+            
+            
+          </div>
+          </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Team Section ======= -->
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact" style="background-color: #f8f8f8">
+      <div class="container" >
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        <div class="row mt-5 " >
+
+
+              <div class="phone mt-20" style="margin-left:12%;">
+                <i class="icofont-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 732-347-6245</p>
+              </div> 
+    
+
+              <div class="email mt-15" style="margin-left: 9%;">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>sales@ismiletechnologies.com</p>
+              </div>
+
+              <div class="address mt-10"  style="margin-left: 7%;">
+                <i class="icofont-google-map"></i>
+                <h4>Location:</h4>
+                <p>241 Jonathan Way </p>
+                <p>Bolingbrook, USA, 60490</p>
+              </div>
+
+
+            </div>
+
+          </div>
+      </div>    
+
+          <div class="container" >
+
+            <div class="section-title">
+              <h2>Rate Us</h2>    
+            <div class="stars">
+              <form action="{{url_for('Rating')}}">
+                <input class="star star-5" id="star-5" type="radio" name="star"/>
+                <label class="star star-5" for="star-5"></label>
+                <input class="star star-4" id="star-4" type="radio" name="star"/>
+                <label class="star star-4" for="star-4"></label>
+                <input class="star star-3" id="star-3" type="radio" name="star"/>
+                <label class="star star-3" for="star-3"></label>
+                <input class="star star-2" id="star-2" type="radio" name="star"/>
+                <label class="star star-2" for="star-2"></label>
+                <input class="star star-1" id="star-1" type="radio" name="star"/>
+                <label class="star star-1" for="star-1"></label>
+              </form>
+            </div> 
+          </div>
+          </div>    
+    </section><!-- End Contact Section -->
+<script>
+    function stat(){
+        var speech = new SpeechSynthesisUtterance();
+        speech.text = 'please scan the Q R code using your mobile phone and upload your x ray image';
+        window.speechSynthesis.speak(speech);
+}
+</script>
+
+  </main><!-- End #main -->
+
+  <footer id="footer">
+
+    <div class="footer-top">
+
+      <div class="container">
+
+        <div class="row  justify-content-center">
+          <div class="col-lg-6">
+            <h3>Ismile Technologies</h3>
+            <p>Ismile Technologies is a global IT services company that specializes in designing, implementing, and managing systems that directly contribute to revenue and business success</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Ismile Technologies</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/survey-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+
+</body>
+
+</html>
+

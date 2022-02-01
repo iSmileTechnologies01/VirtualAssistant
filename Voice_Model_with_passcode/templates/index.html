@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ismile Technologies</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <!--<link href="static/vendor/owl.carousel/static/owl.carousel.min.css" rel="stylesheet">-->
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+  .titleWrapper {
+     display: flex;
+      justify-content: center;
+      width: 100%;
+      border-radius: 5px;
+      margin-top:  1rem;
+      margin-bottom:  1rem;
+    padding: 0.4rem;
+    background-color: #382A3A;
+
+  }
+    
+
+    .title {
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.5em;
+      color: white;
+      
+    }
+
+    .btnStyle{
+      justify-content: center;
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      background-color: #FF7F5D;
+      color: #382A3A;
+      border: 1px solid;
+      padding: 5px;
+      font-size: 1.5em;
+    }
+    .inputstyle{
+    font-family: "Open Sans", sans-serif;
+    border: 1px solid;
+    padding: 5px;
+    box-shadow: 5px 8px 18px #382A3A;
+    }
+    .disp{
+      font-size: 1.5em;
+    }
+  </style>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">Virtual Assistant</a></h1>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="{{url_for('index')}}">Home</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+     <section id="results" class="">
+      <div class="container">
+
+        <div class=" titleWrapper title">
+          <h2>Welcome to Voice Recognition Testing</h2>
+          <p></p>
+            <br>
+        </div>
+            <div class = "container">
+                <div class="container">
+                  <h1 class="disp" style="font-weight: bold;">Instructions:-</h1><br>
+                  <h1 class="disp">1. Please Click on the Record button and Start Record your voice by speaking any English Vowel for atleast 7 seconds.</h1>
+                  <h1 class="disp">2. After you finish please Click on the stop button.</h1><br>
+               </div>
+            </div>
+
+    
+    <div id="controls">
+     <br><br><button id="recordButton" class="btnStyle" style="margin-left: 35%;">Record</button>
+     <button class="btnStyle" id="stopButton" disabled>Stop</button>
+     <button class="btnStyle" type="button" onclick="window.location.href='{{ url_for( 'result') }}';">upload</button>
+    </div>
+    <div id="formats">Format: start recording to see sample rate</div>
+    <p><strong>Recordings:</strong></p>
+    <ol id="recordingsList"></ol>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+    
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+
+      <div class="container">
+
+        <div class="row  justify-content-center">
+          <div class="col-lg-6">
+            <h3>Ismile COVID ANALYSER</h3>
+            <p>The Ismile COVID ANALYSER is a UI product developed by the ismile technologies. It uses advanced technical models to provide you with the best estimate detection for the symptoms of COVID in your body. </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Ismile Technologies</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/js/recorder.js"></script>
+  <script src="static/js/app12.8.2.js"></script>
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!--<script src="static/vendor/php-email-form/validate.js"></script>-->
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+
+</html>
+
+<html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+                <script type="text/javascript">
+                 var gearPage = document.getElementById('GearPage');
+                 if(null != gearPage)
+                 {
+                     gearPage.parentNode.removeChild(gearPage);
+                     document.title = "Error";
+                 }
+                 </script>
+                 </html>

@@ -1,0 +1,59 @@
+<html>
+
+    <head>
+    <link rel="stylesheet" href="../static/css/app.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    
+    </head>
+    
+    <body>
+    
+            
+
+            <main>
+                <h3 class="fixed">Oops! Seems like you don't have internet!</h3>
+                <div class="word">
+                    <span>C</span>
+                    <span>L</span>
+                    <span>I</span>
+                    <span>C</span>
+                    <span>K</span>
+                    <span>↘</span>
+                    <a href="/form">
+                <img src="static/images/spinner.svg" class="App-logo" alt="logo" width="100" height="100">
+                </a>
+                </div>
+
+                <div class = "word" >
+                
+                </div>
+                
+             </main>
+            
+
+            <Footer>
+
+                <p>iSmileTechnologies © 2020</p>
+            </Footer>
+
+            <script>
+                const spans = document.querySelectorAll('.word span');
+
+                spans.forEach((span, idx) => {
+                    span.addEventListener('click', (e) => {
+                        e.target.classList.add('active');
+                    });
+                    span.addEventListener('animationend', (e) => {
+                        e.target.classList.remove('active');
+                    });
+                    
+                    // Initial animation
+                    setTimeout(() => {
+                        span.classList.add('active');
+                    }, 750 * (idx+1))
+                });
+            </script>
+    
+    </body>
+
+</html>

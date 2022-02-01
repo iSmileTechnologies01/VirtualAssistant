@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/css/style1.css" rel="stylesheet">
+
+    <title>Form</title>
+
+     <!--move this to stylesheet-->
+    <style>
+      ._btn_04 {
+        display: inline-block;
+        width: 100%;
+        padding: 12px 0px;
+        background: #f35b14;
+        border-radius:20px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+    }
+      </style>
+     <!--end of stylesheet--> 
+      
+  </head>
+  <body>
+    <section class="form-07">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="_form_07_main">
+              <div class="row">
+                <div class="col-sm-6 ncv-kl-bn">
+                  <div class="_form_07_main_sub_01">
+                    <div class="form-07-head">
+                      <h2>Ismile Technologies</h2>
+                        <br>
+                      <p>Our product is a Covid 19 alert system that collects your vitals to 
+                        check whether you have signs of Covid 19 or not<pre>
+
+                        
+
+
+
+
+                        
+                        
+
+
+                        
+                        
+
+
+                        
+
+
+
+
+
+
+
+
+
+                          
+                      </pre></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 cv-kl-bn">
+                  <div class="_pl_nb_df">
+                    <div class="_bg_cs">
+                      <h2>Enter The Following Details to Continue</h2>
+                    </div>
+                    <form action="{{url_for('passcode')}}" class="survey-form" >
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <label for="Fname">First Name: </label>
+                  <input for= type="text" name="Fname" class="form-control" id="Fname" placeholder="First Name" required />
+                </div>
+                  <div class="col-md-6 form-group">
+                  <label for="Lname">Last Name: </label>
+                  <input type="text" name="Lname" class="form-control" id="Lname" placeholder="Last Name" required/>
+                </div>
+                
+              </div>
+              <div class="form-row">
+                  <div class="col-md-4 form-group">
+                  <label for="Age">Age: </label>
+                  <input type="text" name="Age" class="form-control" id="Age" placeholder="Your Age" required/>
+                </div>
+                <div class="col-md-4 form-group">
+                 <label for="Country">Country: </label>
+                 <select type="text" name="Country" class="form-control" id="Country" placeholder="Your Country" required>
+                  <option value="volvo">America</option>
+                  <option value="saab">Canada</option>
+                  <option value="fiat">India</option>
+                </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <label for="Zip_code">Zip/Postal code: </label>
+                  <input for= type="text" name="Zip_code" class="form-control" id="Zip_code" placeholder="Zip/Postal code" required />
+                </div>
+              </div>
+              <div class="form-group">
+               
+                  <!--<a href="{{url_for('inner')}}">Continue</a>-->
+                  <input class="_btn_04" type="submit" value="Submit Form" id="submit" >  <br> <br>
+                  <input type="checkbox" required name="terms" id="terms" onchange="activateButton(this)">  I am aware that user data is collected
+                 
+              </div>
+			             
+            </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

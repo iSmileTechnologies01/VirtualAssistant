@@ -1,0 +1,133 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+import pandas as pd
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+import time
+import warnings
+warnings.filterwarnings('ignore')
+
+
+# File 1 consists of all the features
+data_1 = pd.read_csv(r"C:\Users\ashra\Downloads\archive (3)\data_new_extended.csv")
+
+# File 2 consists of filenames and their labels
+data_2 = pd.read_csv(r"C:\Users\ashra\Downloads\archive (3)\cough_trial_extended.csv")
+data_1.describe()
+
+data_1.columns
+
+print(data_1)
+
+print(data_2)
+
+data_1['filename'].replace(r'\\', '', regex=True, inplace=True)
+data_1['filename'].replace('^-', '', regex=True, inplace=True)
+data_1['filename'].replace(',', ' ', regex=True, inplace=True)
+data_1['filename'].replace('^_', '', regex=True, inplace=True)
+
+for i in range(len(data_1)):
+    data_1['filename'][i] = data_1['filename'][i].partition('_')[0]
+    data_1['filename'][i] = data_1['filename'][i].partition('.')[0]
+print(data_1['filename'])
+
+data_2["file_properties"].replace('^-', '', regex=True, inplace=True)
+data_2["file_properties"]
+
+for i in range(len(data_2)):
+    data_2['file_properties'][i] = data_2['file_properties'][i].partition('_')[0]
+    data_2['file_properties'][i] = data_2['file_properties'][i].partition('.')[0]
+print(data_2)
+
+data_1
+
+# Joining the Two Files
+
+output1 = pd.merge(data_1, data_2, left_on='filename', right_on='file_properties', how='inner')
+
+output1
+
+output1.drop(['label', 'file_properties'], axis=1, inplace=True) # Dropping the redundant columns
+
+output1
+
+X = output1.iloc[:, 1:27]
+
+Y = output1.iloc[:, -1:]
+
+X
+
+Y['class'].unique()
+
+
+# # Logistic Regression
+
+X_Train, X_Test, Y_Train, Y_Test = train_test_split(X, Y, test_size = 0.30)
+
+start_time = time.time()
+LR_model = LogisticRegression()
+LR_model.fit(X_Train, Y_Train)
+X_Pred = LR_model.predict(X_Test)
+print("--- %s seconds ---" % round((time.time() - start_time),3))
+print()
+print('Accuracy is: ', accuracy_score(Y_Test, X_Pred)*100, '%')
+
+
+# # Support Vector Machine
+
+from sklearn import svm
+
+start_time = time.time()
+SVM_model = svm.SVC()
+SVM_model.fit(X_Train, Y_Train)
+Y_Pred = SVM_model.predict(X_Test)
+print("--- %s seconds ---" % round((time.time() - start_time),3))
+print()
+
+print('Accuracy of SVM is: ', accuracy_score(Y_Pred, Y_Test)*100, '%')
+
+
+# # Decision Trees
+
+from sklearn import tree
+
+start_time = time.time()
+DT_model = tree.DecisionTreeClassifier()
+DT_model.fit(X_Train, Y_Train)
+Y_Pred = DT_model.predict(X_Test)
+print("--- %s seconds ---" % round((time.time() - start_time),3))
+print()
+
+print('Accuracy of Decision Tree is: ', accuracy_score(Y_Pred, Y_Test)*100, '%')
+
+
+# # Random Forest
+
+import sklearn
+from sklearn.ensemble import RandomForestClassifier
+
+start_time = time.time()
+RF_model = RandomForestClassifier(n_estimators=5)
+RF_model.fit(X_Train, Y_Train)
+Y_Pred = RF_model.predict(X_Test)
+print("--- %s seconds ---" % round((time.time() - start_time),3))
+print()
+
+print('Accuracy of Random Forest Classifier is: ', accuracy_score(Y_Pred, Y_Test)*100, '%')
+
+
+# # K Nearest  Neighbors
+
+import sklearn
+from sklearn.neighbors import KNeighborsClassifier
+
+start_time = time.time()
+KNN_model = KNeighborsClassifier(n_neighbors=3)
+KNN_model.fit(X_Train, Y_Train)
+Y_Pred = KNN_model.predict(X_Test)
+print("--- %s seconds ---" % round((time.time() - start_time),3))
+print()
+
+print('Accuracy of K-Nearest Neighbors is: ', accuracy_score(Y_Pred, Y_Test)*100, '%')

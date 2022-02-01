@@ -1,0 +1,27 @@
+{
+  "name": "nodemon",
+  "version": "1.0.0",
+  "description": "That's the simpliest API building based on the wifi script, I modify the file \"index.js\" to \"wifi_module.js\" to make the arrangement looks better.",
+  "main": "index.js",
+  "dependencies": {
+    "check-internet-connected": "^2.0.5",
+    "express": "^4.17.1",
+    "node-wifi": "^2.0.14",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoneRan/Simple-wifi-API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LoneRan/Simple-wifi-API/issues"
+  },
+  "homepage": "https://github.com/LoneRan/Simple-wifi-API#readme"
+}

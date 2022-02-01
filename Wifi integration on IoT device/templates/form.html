@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="static/css/form.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/jquery.ml-keyboard.css">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="static/js/jquery.ml-keyboard.js"></script>
+  <script src="static/js/demo.js"></script>
+  <title>Connect to Internet</title>
+</head>
+
+<body>
+  <div class="main">
+    <p class="sign" align="center">Choose Wifi to Connect</p>
+    <form class="form1" action="/data" method = "POST">
+      
+      
+      
+      
+      <p><select class="un" name= choice method="GET" action="/" >
+          {% for choice in choices %}
+          <option value= "{{choice}}" SELECTED>{{choice}}</option>"
+          {% endfor %}
+      </select></p>
+      <input class = "pass" id = "example-1" type = "text" name = "Password" placeholder="Password"/>
+      
+      
+      <p><input class="submit" type = "submit" value = "Connect" /></p>
+
+      <p class="forgot" align="center"><a href="#">Need help?</p>
+                
+    </div>
+     
+</body>
+
+</html>

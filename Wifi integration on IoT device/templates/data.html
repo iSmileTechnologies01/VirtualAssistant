@@ -1,0 +1,43 @@
+<html>
+
+    <head>
+    <link rel="stylesheet" href="../static/css/app.css">
+    <style type="text/css">
+
+      html,body { height: 100%; margin: 0px; padding: 0px; }
+      #full { background-color: #F3EBF6; height: 100%;text-align: center; }
+
+    </style>
+    </head>
+
+    <body>
+  
+
+            <div id ="full">
+            
+                {% for key,value in form.items() %}
+                    <h2> {{key}}</h2>
+                    <p> {{value}}</p>
+                {% endfor %}
+
+                
+                <h2> {{resText}}</h2>
+
+                {%if status == 'success'%}
+                    <a href = "http://finalmodel.azurewebsites.net/" class="btn">Let's go!</a>
+                    
+                {%endif%}
+
+                 {%if status == 'fail'%}
+                    <a href = "http://localhost:5000/form/" class="form">Go back and connect again</a>
+                {%endif%}
+                    
+                
+            </div>
+            
+
+           
+    
+    </body>
+
+</html>
